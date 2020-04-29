@@ -21,10 +21,7 @@ socketio.on("connection", socket => {
   socket.emit("message", "new User connected");
 
   socket.on("signup", message => {
-    users.push(message);
-    setInterval(() => {
-      console.log(users);
-    }, 2000);
+users.push(message);
     socket.emit("newUser", message);
   });
 });
