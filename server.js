@@ -17,6 +17,7 @@ app.get("/dashboard", (req, res) => {
   res.sendFile(__dirname + "/dashboard.html");
 });
 
+//socket module works start here
 socketio.on("connection", socket => {
   socket.emit("message", "new User connected");
 
